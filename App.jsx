@@ -154,6 +154,9 @@ Na abordagem junguiana, cada pessoa é vista como um ser em constante desenvolvi
                   <Brain className="w-5 h-5 text-[var(--terracota)]" />
                   <span className="text-[var(--azul-marinho)]">CRP 04/80771</span>
                 </div>
+                <div className="flex items-center space-x-2">
+                  <Shield className="w-5 h-5 text-[var(--terracota)]" />
+                  <span className="text-[var(--azul-marinho)]"></span>
                 </div>
               </div>
             </div>
@@ -186,11 +189,11 @@ Na abordagem junguiana, cada pessoa é vista como um ser em constante desenvolvi
                 <h3 className="text-2xl font-bold text-[var(--azul-marinho)] mb-4">Presencial</h3>
                 <p className="text-[var(--cinza-suave)] mb-4">
                   Atendimento em consultório acolhedor, proporcionando um ambiente seguro 
-                  e privativo para sua jornada de autoconhecimento.
+                  e privativo.
                 </p>
                 <div className="flex items-center justify-center space-x-2 text-[var(--terracota)]">
                   <MapPin className="w-4 h-4" />
-                  <span>São Paulo - SP</span>
+                  <span>Alfenas - MG</span>
                 </div>
               </CardContent>
             </Card>
@@ -221,7 +224,7 @@ Na abordagem junguiana, cada pessoa é vista como um ser em constante desenvolvi
           <h2 className="text-4xl font-bold heading-gradient text-center mb-12 animate-on-scroll">Com o que trabalho</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Heart, title: "Ansiedade", desc: "Técnicas para gerenciar e superar a ansiedade" },
+              { icon: Heart, title: "Ansiedade e Depressão", desc: aaaa },
               { icon: Brain, title: "Depressão", desc: "Apoio no processo de recuperação emocional" },
               { icon: Users, title: "Relacionamentos", desc: "Melhoria nas relações interpessoais" },
               { icon: Lightbulb, title: "Autoconhecimento", desc: "Descoberta do seu verdadeiro potencial" },
@@ -237,44 +240,6 @@ Na abordagem junguiana, cada pessoa é vista como um ser em constante desenvolvi
                   </div>
                   <h3 className="text-lg font-bold text-[var(--azul-marinho)] mb-2">{servico.title}</h3>
                   <p className="text-sm text-[var(--cinza-suave)]">{servico.desc}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Depoimentos */}
-      <section id="depoimentos" className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold heading-gradient mb-12 animate-on-scroll">Depoimentos</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                nome: "Maria Silva",
-                texto: "O atendimento transformou minha vida. Encontrei clareza e paz interior que não sabia que era possível.",
-                estrelas: 5
-              },
-              {
-                nome: "João Santos",
-                texto: "Profissional excepcional, com uma abordagem humanizada que me ajudou a superar momentos difíceis.",
-                estrelas: 5
-              },
-              {
-                nome: "Ana Costa",
-                texto: "Recomendo de olhos fechados. O trabalho junguiano me proporcionou um autoconhecimento profundo.",
-                estrelas: 5
-              }
-            ].map((depoimento, index) => (
-              <Card key={index} className="testimonial-card card-hover animate-on-scroll" style={{ animationDelay: `${index * 0.2}s` }}>
-                <CardContent className="p-6">
-                  <div className="flex justify-center mb-4">
-                    {[...Array(depoimento.estrelas)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-[var(--terracota)] text-[var(--terracota)]" />
-                    ))}
-                  </div>
-                  <p className="text-[var(--cinza-suave)] mb-4 italic">"{depoimento.texto}"</p>
-                  <p className="font-bold text-[var(--azul-marinho)]">{depoimento.nome}</p>
                 </CardContent>
               </Card>
             ))}
@@ -300,7 +265,7 @@ Na abordagem junguiana, cada pessoa é vista como um ser em constante desenvolvi
                 </div>
                 <div className="flex items-center space-x-3 hover-scale">
                   <Mail className="w-5 h-5 text-[var(--terracota)]" />
-                  <span className="text-[var(--azul-marinho)]">nicolascarneiro32@gmail.com</span>
+                  <span className="text-[var(--azul-marinho)]">nickcherokee32@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3 hover-scale">
                   <MapPin className="w-5 h-5 text-[var(--terracota)]" />
@@ -325,7 +290,7 @@ Na abordagem junguiana, cada pessoa é vista como um ser em constante desenvolvi
                 </Button>
                 <Button 
                   className="btn-outline-gradient"
-                  onClick={() => window.open('https://instagram.com/psico@buttros', '_blank')}
+                  onClick={() => window.open('https://instagram.com/psico.buttros', '_blank')}
                 >
                   <Instagram className="w-4 h-4 mr-2" />
                   Instagram
@@ -333,39 +298,7 @@ Na abordagem junguiana, cada pessoa é vista como um ser em constante desenvolvi
               </div>
             </div>
 
-            <Card className="gradient-border animate-on-scroll">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold heading-gradient mb-6">Envie uma Mensagem</h3>
-                <form className="space-y-4 contact-form">
-                  <div>
-                    <Input 
-                      placeholder="Seu nome" 
-                      className="border-[var(--bege-quente)] focus:border-[var(--terracota)] transition-all"
-                    />
-                  </div>
-                  <div>
-                    <Input 
-                      type="email" 
-                      placeholder="Seu e-mail" 
-                      className="border-[var(--bege-quente)] focus:border-[var(--terracota)] transition-all"
-                    />
-                  </div>
-                  <div>
-                    <Textarea 
-                      placeholder="Sua mensagem" 
-                      rows={4}
-                      className="border-[var(--bege-quente)] focus:border-[var(--terracota)] transition-all"
-                    />
-                  </div>
-                  <Button 
-                    type="submit" 
-                    className="w-full btn-gradient text-white"
-                  >
-                    Enviar Mensagem
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </section>
